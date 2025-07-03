@@ -1,0 +1,182 @@
+/* Reset body & center content */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* changed from center to fix overflow */
+}
+
+/* Admin container box */
+.admin-box {
+  width: 100%;
+  max-width: 850px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.admin-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Input */
+input[type="password"] {
+  padding: 10px;
+  width: 100%; /* changed from fixed 330px */
+  max-width: 330px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Button style */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Feedback & Add buttons */
+.admin-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.feedback-btn {
+  background-color: #00b894;
+  color: #fff;
+}
+
+.add-student-btn {
+  background-color: #0984e3;
+  color: #fff;
+}
+
+/* Message below password */
+#adminMsg {
+  font-size: 15px;
+  color: #555;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Table responsive wrapper */
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Table itself */
+#historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;  /* Ensures scrolling on small screen */
+  font-family: Arial, sans-serif;
+}
+
+/* Table Head */
+#historyTable thead th {
+  background-color: #026af1;
+  color: #f5f5f5;
+  font-weight: 800;
+  text-align: center;
+  
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Table Body Cells */
+#historyTable tbody td {
+ 
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Highlighted row */
+#historyTable tr.highlight {
+  background-color: hsl(199, 100%, 70%);
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .admin-box {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .admin-header {
+    font-size: 20px;
+  }
+
+  input[type="password"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #historyTable th,
+  #historyTable td {
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid rgba(39, 38, 38, 0.596);
+  }
+
+  #historyTable {
+    min-width: 100%;
+  }
+}
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  margin: auto;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* right padding for icon space */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.password-wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
